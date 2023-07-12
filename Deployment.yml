@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mrdevops
+   name: kloudinsight
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: mrdevops
+     app: kloudinsight
    template:
       metadata:
         labels:
-          app: mrdevops
+          app: kloudinsight
       spec:
        containers:
-        - name: mrdevops
+        - name: kloudinsight
           image: kloudinsight/pipeline-demo
           imagePullPolicy: Always
           ports:
